@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E137D94415A867AF0004D8C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94315A867AF0004D8C2 /* UIKit.framework */; };
+		E137D94615A867AF0004D8C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94515A867AF0004D8C2 /* Foundation.framework */; };
+		E137D94815A867AF0004D8C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94715A867AF0004D8C2 /* CoreGraphics.framework */; };
+		E137D94E15A867AF0004D8C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E137D94C15A867AF0004D8C2 /* InfoPlist.strings */; };
+		E137D95015A867AF0004D8C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E137D94F15A867AF0004D8C2 /* main.m */; };
+		E137D95415A867AF0004D8C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E137D95315A867AF0004D8C2 /* AppDelegate.m */; };
+		E137D95715A867AF0004D8C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E137D95615A867AF0004D8C2 /* ViewController.m */; };
+		E137D95A15A867AF0004D8C2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E137D95815A867AF0004D8C2 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E137D93F15A867AF0004D8C2 /* Geowall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geowall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E137D94315A867AF0004D8C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E137D94515A867AF0004D8C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E137D94715A867AF0004D8C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E137D94B15A867AF0004D8C2 /* Geowall-Info.plist */ = {isa = PBXFileReference; path = "Geowall-Info.plist"; sourceTree = "<group>"; };
+		E137D94D15A867AF0004D8C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E137D94F15A867AF0004D8C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E137D95115A867AF0004D8C2 /* Geowall-Prefix.pch */ = {isa = PBXFileReference; path = "Geowall-Prefix.pch"; sourceTree = "<group>"; };
+		E137D95215A867AF0004D8C2 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		E137D95315A867AF0004D8C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E137D95515A867AF0004D8C2 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		E137D95615A867AF0004D8C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E137D95915A867AF0004D8C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E137D93C15A867AF0004D8C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E137D94415A867AF0004D8C2 /* UIKit.framework in Frameworks */,
+				E137D94615A867AF0004D8C2 /* Foundation.framework in Frameworks */,
+				E137D94815A867AF0004D8C2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E137D93415A867AF0004D8C2 = {
+			isa = PBXGroup;
+			children = (
+				E137D94915A867AF0004D8C2 /* Geowall */,
+				E137D94215A867AF0004D8C2 /* Frameworks */,
+				E137D94015A867AF0004D8C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E137D94015A867AF0004D8C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E137D93F15A867AF0004D8C2 /* Geowall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E137D94215A867AF0004D8C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E137D94315A867AF0004D8C2 /* UIKit.framework */,
+				E137D94515A867AF0004D8C2 /* Foundation.framework */,
+				E137D94715A867AF0004D8C2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E137D94915A867AF0004D8C2 /* Geowall */ = {
+			isa = PBXGroup;
+			children = (
+				E137D95215A867AF0004D8C2 /* AppDelegate.h */,
+				E137D95315A867AF0004D8C2 /* AppDelegate.m */,
+				E137D95515A867AF0004D8C2 /* ViewController.h */,
+				E137D95615A867AF0004D8C2 /* ViewController.m */,
+				E137D95815A867AF0004D8C2 /* ViewController.xib */,
+				E137D94A15A867AF0004D8C2 /* Supporting Files */,
+			);
+			path = Geowall;
+			sourceTree = "<group>";
+		};
+		E137D94A15A867AF0004D8C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E137D94B15A867AF0004D8C2 /* Geowall-Info.plist */,
+				E137D94C15A867AF0004D8C2 /* InfoPlist.strings */,
+				E137D94F15A867AF0004D8C2 /* main.m */,
+				E137D95115A867AF0004D8C2 /* Geowall-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E137D93E15A867AF0004D8C2 /* Geowall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E137D95D15A867AF0004D8C2 /* Build configuration list for PBXNativeTarget "Geowall" */;
+			buildPhases = (
+				E137D93B15A867AF0004D8C2 /* Sources */,
+				E137D93C15A867AF0004D8C2 /* Frameworks */,
+				E137D93D15A867AF0004D8C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Geowall;
+			productName = Geowall;
+			productReference = E137D93F15A867AF0004D8C2 /* Geowall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E137D93615A867AF0004D8C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E137D93915A867AF0004D8C2 /* Build configuration list for PBXProject "Geowall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E137D93415A867AF0004D8C2;
+			productRefGroup = E137D94015A867AF0004D8C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E137D93E15A867AF0004D8C2 /* Geowall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E137D93D15A867AF0004D8C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E137D94E15A867AF0004D8C2 /* InfoPlist.strings in Resources */,
+				E137D95A15A867AF0004D8C2 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E137D93B15A867AF0004D8C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E137D95015A867AF0004D8C2 /* main.m in Sources */,
+				E137D95415A867AF0004D8C2 /* AppDelegate.m in Sources */,
+				E137D95715A867AF0004D8C2 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E137D94C15A867AF0004D8C2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E137D94D15A867AF0004D8C2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E137D95815A867AF0004D8C2 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E137D95915A867AF0004D8C2 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E137D95B15A867AF0004D8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E137D95C15A867AF0004D8C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E137D95E15A867AF0004D8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Geowall/Geowall-Prefix.pch";
+				INFOPLIST_FILE = "Geowall/Geowall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E137D95F15A867AF0004D8C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Geowall/Geowall-Prefix.pch";
+				INFOPLIST_FILE = "Geowall/Geowall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E137D93915A867AF0004D8C2 /* Build configuration list for PBXProject "Geowall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E137D95B15A867AF0004D8C2 /* Debug */,
+				E137D95C15A867AF0004D8C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E137D95D15A867AF0004D8C2 /* Build configuration list for PBXNativeTarget "Geowall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E137D95E15A867AF0004D8C2 /* Debug */,
+				E137D95F15A867AF0004D8C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E137D93615A867AF0004D8C2 /* Project object */;
+}
