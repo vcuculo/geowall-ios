@@ -11,7 +11,7 @@
 static NSString *server = @"http://geo.wallo.be:8081/geowall";
 
 @interface CommunicationController()
-+ (NSMutableURLRequest*) prepareURL;
++ (NSMutableURLRequest*) prepareURLforAction: (NSString*) action;
 @end
 
 @implementation CommunicationController
