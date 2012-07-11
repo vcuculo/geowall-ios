@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommunicationController.h"
+#import "SignupViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    IBOutlet UITextField *userText;
+    IBOutlet UITextField *passwordText;
+    IBOutlet UIButton *loginButton;
+    IBOutlet UIButton *signupButton;
+}
 
+-(BOOL) NSStringIsValidEmail:(NSString *)checkString;
+-(IBAction)loginButton:(id)sender;
+-(IBAction)signupButton:(id)sender;
 @end
