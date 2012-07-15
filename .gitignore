@@ -13,3 +13,5 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+Geowall.xcodeproj/xcuserdata/*
+Geowall.xcodeproj/project.xcworkspace/xcuserdata/*
