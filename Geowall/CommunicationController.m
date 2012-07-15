@@ -48,6 +48,9 @@ static NSString *server = @"http://geo.wallo.be:8081/geowall";
         return [@"error: " stringByAppendingString: jsonResponse];
     
     NSLog(@"sid - %@", sid);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:sid forKey:@"sid"];
+
     return sid;
 }
 
@@ -74,6 +77,9 @@ static NSString *server = @"http://geo.wallo.be:8081/geowall";
         return [@"error: " stringByAppendingString: jsonResponse];
     
     NSLog(@"sid - %@", sid);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:sid forKey:@"sid"];
+    
     return sid;
 }
 
@@ -105,7 +111,43 @@ static NSString *server = @"http://geo.wallo.be:8081/geowall";
         return [@"error: " stringByAppendingString: jsonResponse];
     
     NSLog(@"sid - %@", sid);
+    
+    [[NSUserDefaults standardUserDefaults] setObject:sid forKey:@"sid"];
+    
     return sid;
+}
+
++(NSString*) getNoticeboardWithPosx:(int) posx andPosY:(int) posy since:(NSString*) lastUpdate{
+    NSString* sid = [[NSUserDefaults standardUserDefaults] stringForKey:@"sid"];
+    NSLog(@"getting sid: %@",sid);
+    
+    NSMutableURLRequest *urlRequest = [self prepareURLforAction:@"/getnoticeboard"];
+    
+    NSString *jsonRequest;
+    NSError *error;
+    NSHTTPURLResponse *response;
+    
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    SBJsonWriter *writer = [[SBJsonWriter alloc] init];
+    
+    NSString *stringPosX = [NSString stringWithFormat:@"%d", posx];
+    NSString *stringPosY = [NSString stringWithFormat:@"%d", posy];
+    
+    NSDictionary *command = [NSDictionary dictionaryWithObjectsAndKeys: sid, @"sessionid", stringPosX, @"positionX", stringPosY, @"positionY", lastUpdate, @"date", nil];
+    
+    jsonRequest = [writer stringWithObject:command];
+    
+    NSLog(@"GetNoticeboardRequest - %@", jsonRequest);
+
+    [urlRequest setHTTPBody:[jsonRequest dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    
+    NSString *jsonResponse = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSDictionary *noticeboard = [parser objectWithString:jsonResponse error:nil];
+    NSLog(@"GetNoticeboardResponse - %@", jsonResponse);
+    
+    return nil;
 }
 
 @end

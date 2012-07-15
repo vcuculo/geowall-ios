@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E130C30F15B2E7C200A48773 /* MapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E130C30E15B2E7C200A48773 /* MapGestureRecognizer.m */; };
+		E130C31315B3070B00A48773 /* WallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E130C31115B3070A00A48773 /* WallViewController.m */; };
+		E130C31415B3070B00A48773 /* WallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E130C31215B3070A00A48773 /* WallViewController.xib */; };
 		E137D94415A867AF0004D8C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94315A867AF0004D8C2 /* UIKit.framework */; };
 		E137D94615A867AF0004D8C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94515A867AF0004D8C2 /* Foundation.framework */; };
 		E137D94815A867AF0004D8C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94715A867AF0004D8C2 /* CoreGraphics.framework */; };
@@ -45,10 +48,19 @@
 		E1BCDAC615AAC184000F038E /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BCDAC415AAC184000F038E /* SignupViewController.m */; };
 		E1BCDAC715AAC184000F038E /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1BCDAC515AAC184000F038E /* SignupViewController.xib */; };
 		E1BCDAD015AB1BDC000F038E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BCDACF15AB1BDC000F038E /* User.m */; };
+		E1C4554715B0059100D77306 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C4554515B0059100D77306 /* MapViewController.m */; };
+		E1C4554C15B007D200D77306 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C4554B15B007D200D77306 /* NSString+MD5.m */; };
+		E1C4554E15B0114900D77306 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C4554D15B0114900D77306 /* MapKit.framework */; };
+		E1C4555015B023B100D77306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C4554F15B023B100D77306 /* CoreLocation.framework */; };
 		E1F6EEA015A88C2B00B8ABF7 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EE9F15A88C2B00B8ABF7 /* ic_launcher.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E130C30D15B2E7C200A48773 /* MapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGestureRecognizer.h; sourceTree = "<group>"; };
+		E130C30E15B2E7C200A48773 /* MapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGestureRecognizer.m; sourceTree = "<group>"; };
+		E130C31015B3070A00A48773 /* WallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallViewController.h; sourceTree = "<group>"; };
+		E130C31115B3070A00A48773 /* WallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallViewController.m; sourceTree = "<group>"; };
+		E130C31215B3070A00A48773 /* WallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WallViewController.xib; sourceTree = "<group>"; };
 		E137D93F15A867AF0004D8C2 /* Geowall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geowall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E137D94315A867AF0004D8C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E137D94515A867AF0004D8C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +121,12 @@
 		E1BCDAC515AAC184000F038E /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		E1BCDACE15AB1BDC000F038E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E1BCDACF15AB1BDC000F038E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E1C4554415B0059100D77306 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		E1C4554515B0059100D77306 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E1C4554A15B007D200D77306 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		E1C4554B15B007D200D77306 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		E1C4554D15B0114900D77306 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E1C4554F15B023B100D77306 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E1F6EE9F15A88C2B00B8ABF7 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C4555015B023B100D77306 /* CoreLocation.framework in Frameworks */,
+				E1C4554E15B0114900D77306 /* MapKit.framework in Frameworks */,
 				E137D94415A867AF0004D8C2 /* UIKit.framework in Frameworks */,
 				E137D94615A867AF0004D8C2 /* Foundation.framework in Frameworks */,
 				E137D94815A867AF0004D8C2 /* CoreGraphics.framework in Frameworks */,
@@ -147,11 +167,13 @@
 		E137D94215A867AF0004D8C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1C4554F15B023B100D77306 /* CoreLocation.framework */,
 				E1B56DBE15AD5D9900A78582 /* NSData_Base64 */,
 				E137DFA615A876600004D8C2 /* SBJSON */,
 				E137D94315A867AF0004D8C2 /* UIKit.framework */,
 				E137D94515A867AF0004D8C2 /* Foundation.framework */,
 				E137D94715A867AF0004D8C2 /* CoreGraphics.framework */,
+				E1C4554D15B0114900D77306 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +184,8 @@
 				E15831E115AD610600A0DD33 /* images */,
 				E137D97A15A86E0F0004D8C2 /* CommunicationController.h */,
 				E137D97B15A86E0F0004D8C2 /* CommunicationController.m */,
+				E1C4554A15B007D200D77306 /* NSString+MD5.h */,
+				E1C4554B15B007D200D77306 /* NSString+MD5.m */,
 				E137D95215A867AF0004D8C2 /* AppDelegate.h */,
 				E137D95315A867AF0004D8C2 /* AppDelegate.m */,
 				E137D95515A867AF0004D8C2 /* ViewController.h */,
@@ -170,6 +194,13 @@
 				E1BCDAC315AAC184000F038E /* SignupViewController.h */,
 				E1BCDAC415AAC184000F038E /* SignupViewController.m */,
 				E1BCDAC515AAC184000F038E /* SignupViewController.xib */,
+				E1C4554415B0059100D77306 /* MapViewController.h */,
+				E1C4554515B0059100D77306 /* MapViewController.m */,
+				E130C30D15B2E7C200A48773 /* MapGestureRecognizer.h */,
+				E130C30E15B2E7C200A48773 /* MapGestureRecognizer.m */,
+				E130C31015B3070A00A48773 /* WallViewController.h */,
+				E130C31115B3070A00A48773 /* WallViewController.m */,
+				E130C31215B3070A00A48773 /* WallViewController.xib */,
 				E137D94A15A867AF0004D8C2 /* Supporting Files */,
 				E1BCDACE15AB1BDC000F038E /* User.h */,
 				E1BCDACF15AB1BDC000F038E /* User.m */,
@@ -318,6 +349,7 @@
 				E15831F915AD610600A0DD33 /* ravenna.png in Resources */,
 				E15831FA15AD610600A0DD33 /* twitter.png in Resources */,
 				E15831FB15AD610600A0DD33 /* updateimage.png in Resources */,
+				E130C31415B3070B00A48773 /* WallViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +379,10 @@
 				E1B56E0D15AD5E2D00A78582 /* SBJsonTokeniser.m in Sources */,
 				E1B56E0E15AD5E2D00A78582 /* SBJsonUTF8Stream.m in Sources */,
 				E1B56E0F15AD5E2D00A78582 /* SBJsonWriter.m in Sources */,
+				E1C4554715B0059100D77306 /* MapViewController.m in Sources */,
+				E1C4554C15B007D200D77306 /* NSString+MD5.m in Sources */,
+				E130C30F15B2E7C200A48773 /* MapGestureRecognizer.m in Sources */,
+				E130C31315B3070B00A48773 /* WallViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

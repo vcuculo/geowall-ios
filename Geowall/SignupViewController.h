@@ -10,8 +10,10 @@
 #import "User.h"
 #import "NSData+Base64.h"
 #import "CommunicationController.h"
+#import "MapViewController.h"
+#import "NSString+MD5.h"
 
-@interface SignupViewController : UIViewController
+@interface SignupViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     IBOutlet UITextField *userText;
     IBOutlet UITextField *emailText;

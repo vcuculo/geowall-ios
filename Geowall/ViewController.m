@@ -28,25 +28,24 @@
     }
     
     if ([self NSStringIsValidEmail:usermail])
-        result = [CommunicationController loginWithEmail:usermail andPassword:pass];
+        result = [CommunicationController loginWithEmail:usermail andPassword:[pass MD5]];
     else 
-        result = [CommunicationController loginWithUsername:usermail andPassword:pass];
+        result = [CommunicationController loginWithUsername:usermail andPassword:[pass MD5]];
     
     if ([result hasPrefix:@"error:"]) {
         UIAlertView *error = [[[UIAlertView alloc] initWithTitle: @"Login error" message: result delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil] autorelease];
         [error show];
     } else {
-        // apri map activity
+        MapViewController *mapView = [[[MapViewController alloc] init] autorelease];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mapView];        
+        [self presentViewController:navController animated:YES completion:nil];
     }
-    
 }
 
 -(IBAction)signupButton:(id)sender
 {
     SignupViewController *signupView = [[SignupViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] init];
-    [navController pushViewController:signupView animated:YES];
-        
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:signupView];        
     [self presentViewController:navController animated:YES completion:nil];
 }
 

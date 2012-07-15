@@ -101,7 +101,7 @@
         NSData *flatImage = UIImageJPEGRepresentation(avatar, 0.1f);
         NSString *image64 = [flatImage base64EncodedString];
         
-        User *u = [[User alloc] initWithUsername:userText.text email:emailText.text password:passwordText.text avatar:image64 city:cityText.text country:countryText.text birthday:birthdayText.placeholder];
+        User *u = [[User alloc] initWithUsername:userText.text email:emailText.text password: [passwordText.text MD5] avatar:image64 city:cityText.text country:countryText.text birthday:birthdayText.placeholder];
         
         result = [CommunicationController registerWithUser:u];
         
@@ -109,7 +109,8 @@
             UIAlertView *error = [[[UIAlertView alloc] initWithTitle: @"Sign up error" message: result delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil] autorelease];
             [error show];
         } else {
-            // apri map activity
+             MapViewController *mapView = [[MapViewController alloc] init];
+            [[self navigationController] pushViewController:mapView animated:YES];
         }
     }
     return;

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CommunicationController.h"
 #import "SignupViewController.h"
+#import "NSString+MD5.h"
+#import "MapViewController.h"
 
 @interface ViewController : UIViewController{
     IBOutlet UITextField *userText;

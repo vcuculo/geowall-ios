@@ -15,5 +15,5 @@
 +(NSString*) loginWithUsername: (NSString*) user andPassword: (NSString*) pass;
 +(NSString*) loginWithEmail: (NSString*) email andPassword: (NSString*) pass;
 +(NSString*) registerWithUser: (User *) user;
-
++(NSString*) getNoticeboardWithPosx:(int) posx andPosY:(int) posy since:(NSString*) lastUpdate;
 @end
