@@ -94,11 +94,8 @@
 - (void) imagePickerController: (UIImagePickerController*) picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    
-   // UIImageView *imv = [[UIImageView alloc]initWithFrame:CGRectMake(3,2, 25, 25)];
-   // imv.image = image;
+
     [uploadedImage setImage:image];
-   // [imv release];
     
     [imagePicker dismissModalViewControllerAnimated:YES];
 }
