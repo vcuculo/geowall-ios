@@ -14,6 +14,7 @@
 
 -(User*) initWithUsername: (NSString*) mUsername email: (NSString*) mEmail password: (NSString*) mPass avatar: (NSString*) mAvatar city:(NSString*) mCity country:(NSString*) mCountry birthday:(NSString*) mBirthday
 {
+    self = [super init];
     username = mUsername;
     email = mEmail;
     pass = mPass;

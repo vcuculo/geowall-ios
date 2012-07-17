@@ -14,7 +14,7 @@
 
 @implementation ViewController
 
--(IBAction)loginButton:(id)sender
+- (IBAction)loginButton:(id)sender
 {
     NSString *usermail = userText.text;
     NSString *pass = passwordText.text;
@@ -37,16 +37,14 @@
         [error show];
     } else {
         MapViewController *mapView = [[[MapViewController alloc] init] autorelease];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mapView];        
-        [self presentViewController:navController animated:YES completion:nil];
+        [[self navigationController] pushViewController:mapView animated:YES];
     }
 }
 
--(IBAction)signupButton:(id)sender
+- (IBAction)signupButton:(id)sender
 {
-    SignupViewController *signupView = [[SignupViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:signupView];        
-    [self presentViewController:navController animated:YES completion:nil];
+    SignupViewController *signupView = [[[SignupViewController alloc] init] autorelease];
+    [[self navigationController] pushViewController:signupView animated:YES];
 }
 
 - (BOOL) NSStringIsValidEmail:(NSString *)checkString
@@ -59,7 +57,7 @@
     return [emailTest evaluateWithObject:checkString];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
 
@@ -78,6 +76,18 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 @end

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E124E70D15B4430000E74D48 /* InsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E124E70B15B4430000E74D48 /* InsertViewController.m */; };
+		E124E70E15B4430000E74D48 /* InsertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E124E70C15B4430000E74D48 /* InsertViewController.xib */; };
 		E130C30F15B2E7C200A48773 /* MapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E130C30E15B2E7C200A48773 /* MapGestureRecognizer.m */; };
 		E130C31315B3070B00A48773 /* WallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E130C31115B3070A00A48773 /* WallViewController.m */; };
-		E130C31415B3070B00A48773 /* WallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E130C31215B3070A00A48773 /* WallViewController.xib */; };
 		E137D94415A867AF0004D8C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94315A867AF0004D8C2 /* UIKit.framework */; };
 		E137D94615A867AF0004D8C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94515A867AF0004D8C2 /* Foundation.framework */; };
 		E137D94815A867AF0004D8C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E137D94715A867AF0004D8C2 /* CoreGraphics.framework */; };
@@ -52,15 +53,18 @@
 		E1C4554C15B007D200D77306 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C4554B15B007D200D77306 /* NSString+MD5.m */; };
 		E1C4554E15B0114900D77306 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C4554D15B0114900D77306 /* MapKit.framework */; };
 		E1C4555015B023B100D77306 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C4554F15B023B100D77306 /* CoreLocation.framework */; };
+		E1E002F815B4084F008BAF95 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E002F715B4084F008BAF95 /* Message.m */; };
 		E1F6EEA015A88C2B00B8ABF7 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F6EE9F15A88C2B00B8ABF7 /* ic_launcher.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E124E70A15B4430000E74D48 /* InsertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertViewController.h; sourceTree = "<group>"; };
+		E124E70B15B4430000E74D48 /* InsertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertViewController.m; sourceTree = "<group>"; };
+		E124E70C15B4430000E74D48 /* InsertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InsertViewController.xib; sourceTree = "<group>"; };
 		E130C30D15B2E7C200A48773 /* MapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGestureRecognizer.h; sourceTree = "<group>"; };
 		E130C30E15B2E7C200A48773 /* MapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapGestureRecognizer.m; sourceTree = "<group>"; };
 		E130C31015B3070A00A48773 /* WallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallViewController.h; sourceTree = "<group>"; };
 		E130C31115B3070A00A48773 /* WallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallViewController.m; sourceTree = "<group>"; };
-		E130C31215B3070A00A48773 /* WallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WallViewController.xib; sourceTree = "<group>"; };
 		E137D93F15A867AF0004D8C2 /* Geowall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geowall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E137D94315A867AF0004D8C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E137D94515A867AF0004D8C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +131,8 @@
 		E1C4554B15B007D200D77306 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		E1C4554D15B0114900D77306 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E1C4554F15B023B100D77306 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E1E002F615B4084F008BAF95 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		E1E002F715B4084F008BAF95 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		E1F6EE9F15A88C2B00B8ABF7 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,8 +206,12 @@
 				E130C30E15B2E7C200A48773 /* MapGestureRecognizer.m */,
 				E130C31015B3070A00A48773 /* WallViewController.h */,
 				E130C31115B3070A00A48773 /* WallViewController.m */,
-				E130C31215B3070A00A48773 /* WallViewController.xib */,
+				E124E70A15B4430000E74D48 /* InsertViewController.h */,
+				E124E70B15B4430000E74D48 /* InsertViewController.m */,
+				E124E70C15B4430000E74D48 /* InsertViewController.xib */,
 				E137D94A15A867AF0004D8C2 /* Supporting Files */,
+				E1E002F615B4084F008BAF95 /* Message.h */,
+				E1E002F715B4084F008BAF95 /* Message.m */,
 				E1BCDACE15AB1BDC000F038E /* User.h */,
 				E1BCDACF15AB1BDC000F038E /* User.m */,
 			);
@@ -349,7 +359,7 @@
 				E15831F915AD610600A0DD33 /* ravenna.png in Resources */,
 				E15831FA15AD610600A0DD33 /* twitter.png in Resources */,
 				E15831FB15AD610600A0DD33 /* updateimage.png in Resources */,
-				E130C31415B3070B00A48773 /* WallViewController.xib in Resources */,
+				E124E70E15B4430000E74D48 /* InsertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +393,8 @@
 				E1C4554C15B007D200D77306 /* NSString+MD5.m in Sources */,
 				E130C30F15B2E7C200A48773 /* MapGestureRecognizer.m in Sources */,
 				E130C31315B3070B00A48773 /* WallViewController.m in Sources */,
+				E1E002F815B4084F008BAF95 /* Message.m in Sources */,
+				E124E70D15B4430000E74D48 /* InsertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

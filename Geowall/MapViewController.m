@@ -52,12 +52,12 @@ double LAT_FACTOR = 0.005;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id )overlay{
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id )overlay{
     if([overlay isKindOfClass:[MKPolygon class]]){
         MKPolygonView *view = [[[MKPolygonView alloc] initWithOverlay:overlay] autorelease];
-        view.lineWidth=0.5;
-        view.strokeColor=[UIColor blackColor];
-        view.fillColor=[[UIColor whiteColor] colorWithAlphaComponent:0.4];
+        view.lineWidth = 0.5;
+        view.strokeColor = [UIColor blackColor];
+        view.fillColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
         [areas addObject:view];
         return view;
     }
@@ -76,35 +76,39 @@ double LAT_FACTOR = 0.005;
     region.center = location;
     [mapView setRegion:region animated:YES];
     
+    [mapView removeOverlays:mapView.overlays];
+    //[areas removeAllObjects];
+    
     for (int i = 0 ; i < 9 ; i++){
         double latfact = -(i / 3) + 1;
         double lonfact = (i % 3) - 1;
         
-        double lat = (ceil(location.latitude*100)/100) + (latfact * LAT_FACTOR);
-        double lon = (floor(location.longitude*100)/100) + (lonfact * LON_FACTOR);
-        
+        double lat = (ceil(location.latitude / LAT_FACTOR) * LAT_FACTOR) + (latfact * LAT_FACTOR);
+        double lon = (floor(location.longitude / LON_FACTOR) * LON_FACTOR) + (lonfact * LON_FACTOR);
+         
         CLLocationCoordinate2D roundedLocation = CLLocationCoordinate2DMake(lat,lon);
-        
+        NSLog(@"%f - %f",roundedLocation.latitude, roundedLocation.longitude);
+
         CLLocationCoordinate2D area[5];
         area[0] = roundedLocation;
         area[1] = CLLocationCoordinate2DMake(roundedLocation.latitude, roundedLocation.longitude + LON_FACTOR);
         area[2] = CLLocationCoordinate2DMake(roundedLocation.latitude - LAT_FACTOR , roundedLocation.longitude + LON_FACTOR);
         area[3] = CLLocationCoordinate2DMake(roundedLocation.latitude - LAT_FACTOR, roundedLocation.longitude);
         area[4] = roundedLocation;
-
+        
         MKPolygon *rect = [MKPolygon polygonWithCoordinates:area count:5];
         [mapView addOverlay:rect];
         [rect release];
     }
 }
 
--(NSMutableArray*) areas{
+- (NSMutableArray*) areas{
     return areas;
 }
 
--(void) openNoticeboard:(NSInteger) index{
+- (void) openNoticeboard:(NSInteger) index{
     MKPolygonView* view = [areas objectAtIndex:index];
-    
+    BOOL editable = ((index % 9) == 4); /* FIX THIS */
     MKPolygon* noticeboard = [view polygon];
 
     CLLocationCoordinate2D noticeboardPosition[1];
@@ -112,8 +116,7 @@ double LAT_FACTOR = 0.005;
     int posx = round(noticeboardPosition[0].latitude * 1E6);
     int posy = round(noticeboardPosition[0].longitude * 1E6);
     
-    [CommunicationController getNoticeboardWithPosx:posx andPosY:posy since:nil];
-    WallViewController *wallView = [[WallViewController alloc] init];
+    WallViewController *wallView = [[WallViewController alloc] initWithEditable:editable andPosX: posx andPosY: posy];
     [[super navigationController] pushViewController:wallView animated:YES];
 }
 

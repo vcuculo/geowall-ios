@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import "Message.h"
+#import "NSData+Base64.h"
+#import "InsertViewController.h"
 
-@interface WallViewController : UIViewController
+@interface WallViewController : UITableViewController{
+    NSMutableArray* myMessages;
+    BOOL editable;
+    int wallPosx, wallPosy;
+}
+- (id)initWithEditable:(BOOL) isEditable andPosX:(int) posx andPosY:(int) posy;
 
 @end

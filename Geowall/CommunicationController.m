@@ -9,6 +9,8 @@
 #import "CommunicationController.h"
 
 static NSString *server = @"http://geo.wallo.be:8081/geowall";
+//static NSString *server = @"http://localhost:12345/geowall";
+//static NSString *server = @"http://192.168.43.125:8081/geowall";
 
 @interface CommunicationController()
 + (NSMutableURLRequest*) prepareURLforAction: (NSString*) action;
@@ -46,9 +48,7 @@ static NSString *server = @"http://geo.wallo.be:8081/geowall";
     
     if (sid == nil)
         return [@"error: " stringByAppendingString: jsonResponse];
-    
-    NSLog(@"sid - %@", sid);
-    
+        
     [[NSUserDefaults standardUserDefaults] setObject:sid forKey:@"sid"];
 
     return sid;
@@ -93,7 +93,11 @@ static NSString *server = @"http://geo.wallo.be:8081/geowall";
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     SBJsonWriter *writer = [[SBJsonWriter alloc] init];
     
-    NSDictionary *command = [NSDictionary dictionaryWithObjectsAndKeys:[user username], @"nick", [user pass], @"pw", [user email], @"email", [user avatar], @"image", [user birthday], @"date", [user country], @"country", [user city], @"city", nil];
+    NSMutableDictionary *command;
+    command = [NSDictionary dictionaryWithObjectsAndKeys:[user username], @"nick", [user pass], @"pw", [user email], @"email", [user avatar], @"image", [user country], @"country", [user city], @"city", nil];
+    
+    if ([user birthday].length != 0)
+        [command setObject:[user birthday] forKey:@"date"];
     
     jsonRequest = [writer stringWithObject:command];
     
@@ -117,7 +121,7 @@ static NSString *server = @"http://geo.wallo.be:8081/geowall";
     return sid;
 }
 
-+(NSString*) getNoticeboardWithPosx:(int) posx andPosY:(int) posy since:(NSString*) lastUpdate{
++(NSMutableArray*) getNoticeboardWithPosX:(int) posx andPosY:(int) posy since:(NSString*) lastUpdate{
     NSString* sid = [[NSUserDefaults standardUserDefaults] stringForKey:@"sid"];
     NSLog(@"getting sid: %@",sid);
     
@@ -144,9 +148,51 @@ static NSString *server = @"http://geo.wallo.be:8081/geowall";
     NSData *responseData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
     
     NSString *jsonResponse = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSDictionary *noticeboard = [parser objectWithString:jsonResponse error:nil];
+    NSDictionary *jsonNoticeboard = [parser objectWithString:jsonResponse error:nil];
+    
+    NSMutableArray *jsonMessages = [jsonNoticeboard objectForKey:@"messages"];
+    
     NSLog(@"GetNoticeboardResponse - %@", jsonResponse);
     
+    Message *mess;
+    NSMutableArray *messages = [[NSMutableArray alloc] initWithCapacity:jsonMessages.count];
+    
+    for (NSDictionary *message in jsonMessages){
+        mess = [[Message alloc]initWithId:[[message valueForKey:@"id"] intValue] text:[message valueForKey:@"text"] nick:[message valueForKey:@"nick"] data:[message valueForKey:@"date"] image:[message valueForKey:@"image"] video:[message valueForKey:@"video"]];
+        [messages addObject:mess];
+    }
+    
+    return messages;
+}
+
++(NSString*) insertMessage:(Message*) message atPosX:(int) posx andPosY:(int) posy{
+    NSString* sid = [[NSUserDefaults standardUserDefaults] stringForKey:@"sid"];
+    NSLog(@"getting sid: %@",sid);
+    
+    NSMutableURLRequest *urlRequest = [self prepareURLforAction:@"/insert"];
+    
+    NSString *jsonRequest;
+    NSError *error;
+    NSHTTPURLResponse *response;
+    
+    SBJsonWriter *writer = [[SBJsonWriter alloc] init];
+    
+    NSString *stringPosX = [NSString stringWithFormat:@"%d", posx];
+    NSString *stringPosY = [NSString stringWithFormat:@"%d", posy];
+    
+    NSDictionary *command = [NSDictionary dictionaryWithObjectsAndKeys: sid, @"sessionid", stringPosX, @"positionX", stringPosY, @"positionY", [message testo], @"text", [message image], @"image", [message video], @"video", nil];
+    
+    jsonRequest = [writer stringWithObject:command];
+    
+    NSLog(@"InsertMessageRequest - %@", jsonRequest);
+    
+    [urlRequest setHTTPBody:[jsonRequest dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    
+    NSString *jsonResponse = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"InsertMessageResponse - %@", jsonResponse);
+
     return nil;
 }
 

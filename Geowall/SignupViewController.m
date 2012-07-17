@@ -28,10 +28,7 @@
     
     UIBarButtonItem *doneButton = [[[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(signup:)] autorelease];
     self.navigationItem.rightBarButtonItem = doneButton;
-
-    UIBarButtonItem *backButton = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(back:)] autorelease];
-    self.navigationItem.leftBarButtonItem = backButton;
-    
+   
     imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.allowsEditing = true;
     imagePicker.delegate = self;
@@ -45,7 +42,7 @@
     // e.g. self.myOutlet = nil;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
 
@@ -70,21 +67,17 @@
     [MySQLdateFormatter setDateFormat:@"yyyy-MM-dd"];
 
     birthdayText.text = [dateFormatter stringFromDate: sender.date];
-    birthdayText.placeholder = [MySQLdateFormatter stringFromDate: sender.date];
+    mySQLBirthday.text = [MySQLdateFormatter stringFromDate: sender.date];
 }
 
--(void)hidePicker:(UIDatePicker *)sender {
+- (void)hidePicker:(UIDatePicker *)sender {
     NSLog(@"doubleclick");
     sender.hidden = YES;
 }
 
--(IBAction)changeAvatar:(id)sender
+- (IBAction)changeAvatar:(id)sender
 {
     [self presentModalViewController:imagePicker animated:YES];
-}
-
-- (void)back: (id) sender{
-    [[self navigationController] popViewControllerAnimated:YES];   
 }
 
 - (void)signup:(id) sender {  
@@ -101,7 +94,7 @@
         NSData *flatImage = UIImageJPEGRepresentation(avatar, 0.1f);
         NSString *image64 = [flatImage base64EncodedString];
         
-        User *u = [[User alloc] initWithUsername:userText.text email:emailText.text password: [passwordText.text MD5] avatar:image64 city:cityText.text country:countryText.text birthday:birthdayText.placeholder];
+        User *u = [[User alloc] initWithUsername:userText.text email:emailText.text password: [passwordText.text MD5] avatar:image64 city:cityText.text country:countryText.text birthday:mySQLBirthday.text];
         
         result = [CommunicationController registerWithUser:u];
         

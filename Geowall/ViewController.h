@@ -19,7 +19,7 @@
     IBOutlet UIButton *signupButton;
 }
 
--(BOOL) NSStringIsValidEmail:(NSString *)checkString;
--(IBAction)loginButton:(id)sender;
--(IBAction)signupButton:(id)sender;
+- (BOOL) NSStringIsValidEmail:(NSString *)checkString;
+- (IBAction)loginButton:(id)sender;
+- (IBAction)signupButton:(id)sender;
 @end

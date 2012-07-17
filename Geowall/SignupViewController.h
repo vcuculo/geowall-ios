@@ -23,12 +23,13 @@
     IBOutlet UITextField *countryText;
     IBOutlet UITextField *cityText;
     IBOutlet UIButton *avatarImage;
+    IBOutlet UILabel *mySQLBirthday;
     
     UIImagePickerController *imagePicker;
 }
 
 @property (nonatomic, retain) UIImagePickerController *imagePicker;
 
--(IBAction)changeAvatar:(id)sender;
+- (IBAction)changeAvatar:(id)sender;
 
 @end

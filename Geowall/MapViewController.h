@@ -17,6 +17,6 @@
     NSArray* views;
     NSMutableArray *areas;
 }
--(void) openNoticeboard:(NSInteger) index;
--(NSMutableArray*) areas;
+- (void) openNoticeboard:(NSInteger) index;
+- (NSMutableArray*) areas;
 @end
