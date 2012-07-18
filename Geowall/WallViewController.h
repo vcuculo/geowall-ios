@@ -12,6 +12,10 @@
 #import "NSData+Base64.h"
 #import "InsertViewController.h"
 
+#define FONT_SIZE 14.0f
+#define CELL_CONTENT_WIDTH 320.0f
+#define CELL_CONTENT_MARGIN 10.0f
+
 @interface WallViewController : UITableViewController{
     NSMutableArray* myMessages;
     BOOL editable;

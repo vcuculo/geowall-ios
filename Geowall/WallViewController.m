@@ -14,6 +14,7 @@
 
 @implementation WallViewController
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
 
@@ -114,6 +115,20 @@
     [[super navigationController] pushViewController:insertView animated:YES];
     [insertView release];
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    Message *mess = [myMessages objectAtIndex:[indexPath row]] ;
+    NSString *text = mess.testo;
+    
+    CGSize constraint = CGSizeMake(CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), 20000.0f);
+    
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+    
+    CGFloat height = MAX(size.height, 44.0f);
+    
+    return height + (CELL_CONTENT_MARGIN * 2);
 }
 
 - (void)viewDidUnload
