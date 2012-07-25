@@ -173,9 +173,9 @@
 		E137D94215A867AF0004D8C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E1C4554F15B023B100D77306 /* CoreLocation.framework */,
 				E1B56DBE15AD5D9900A78582 /* NSData_Base64 */,
 				E137DFA615A876600004D8C2 /* SBJSON */,
+				E1C4554F15B023B100D77306 /* CoreLocation.framework */,
 				E137D94315A867AF0004D8C2 /* UIKit.framework */,
 				E137D94515A867AF0004D8C2 /* Foundation.framework */,
 				E137D94715A867AF0004D8C2 /* CoreGraphics.framework */,

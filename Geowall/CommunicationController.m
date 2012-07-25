@@ -8,7 +8,8 @@
 
 #import "CommunicationController.h"
 
-static NSString *server = @"http://geo.wallo.be:8081/geowall";
+//static NSString *server = @"http://geo.wallo.be:8081/geowall";
+static NSString *server = @"http://localhost:12345/geowall";
 
 @interface CommunicationController()
 + (NSMutableURLRequest*) prepareURLforAction: (NSString*) action;
